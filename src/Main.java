@@ -14,6 +14,7 @@ public class Main
         final String menu = "A - Add D - Delete P - Print Q - Quit";  //sets menu to a final string because it never changes
         do //Start of loop that will run until the while condition is met
         {
+
             showList();
             //display the list
 
@@ -28,7 +29,7 @@ public class Main
                     break; //force break of switch
 
                 case "D":
-                    deleteItem();
+                    deleteListItem(); //calling of method that will remove an item from the list
                     break; //force break of switch
 
                 case "P":
@@ -75,7 +76,7 @@ public class Main
         return done; //return of a boolean variable
     }
 
-    private static void deleteItem()
+    private static void deleteListItem()
     {
         int itemToRemove = SafeInput.getRangedInt(in, "What list item are you wanting to remove?",1, list.size()); //user input prompt asking the user to input an int of what item they are wanting to remove
         itemToRemove = itemToRemove - 1; //equation to see the input received to the correct arrray indices
